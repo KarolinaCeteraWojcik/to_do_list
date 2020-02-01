@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --sand: #DCD29C;
+    --storm: #044463;
+    --ash: #ABAAB1;
+    --green: #28A745;
+    --red: #dc3545;
+    --blue: #007bff;
+    --paper: #eeeeee;
+    --custom-radius: 0.5rem;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 8rem;
+    background-color: var(--storm);
+    box-shadow: 0 0 3.2rem 1.4rem rgba(0,0,0,0.5);
+}
+
+.title {
+    color: white;
+    font-size: 6rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    line-height: 5rem;
+    text-align: center;
+}
+
+main {
+    width: 100vw;
+    height: calc(100vh - 13rem);
+    background-color: var(--sand);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.adding-box {
+    margin-top: 10rem;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.adding-box input {
+    width: 66%;
+    padding: 1rem;
+    font-size: 3rem;
+    border-radius: var(--custom-radius);
+    border: none;
+}
+
+.priority-box {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.priority-description {
+    font-size: 3rem;
+    margin-right: 2rem;
+}
+
+.priority-box input{
+    width: 15%;
+}
+
+button {
+    padding: 0.8rem 1.5rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    color: white;
+    font-weight: 300;
+    border-radius: var(--custom-radius);
+    border: none;
+    font-size: 1.7rem;
+}
+
+button.confirm {
+    width: 20%;
+}
+
+button.confirm,
+button.complete{
+    background-color: var(--green);
+}
+
+button.delete,
+button.remove {
+    background-color: var(--red);
+}
+
+button.reset {
+    background-color: var(--blue);
+}
+
+button.confirm:hover {
+    background-color: #0c6a0e;
+}
+
+button.delete:hover,
+button.remove:hover {
+    background-color: #6a0f11;
+}
+
+button.reset:hover {
+    background-color: #00488F;
+}
+
+button:active {
+    box-shadow: inset 0 0 2.3rem 0.5rem rgba(0,0,0,0.35);
+}
+
+.task-box {
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    overflow: auto;
+}
+
+.to-finish {
+    padding: 2rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    border-radius: var(--custom-radius);
+    background-color: var(--storm);
+    font-size: 3rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+.list-box {
+    overflow: hidden;
+}
+
+.task-list {
+    min-height: 20rem;
+    max-height: 30rem;
+    border-radius: var(--custom-radius);
+    overflow: auto;
+    background-color: var(--paper);
+}
+
+.task {
+    font-size: 2rem;
+    padding: 1rem;
+    margin: 1rem 2rem;
+    border-bottom: 0.1rem solid rgba(0,0,0,0.1);
+}
+
+.priority {
+    position: relative;
+    display: inline-block;
+    float: right;
+}
+
+.completed {
+    color: var(--red);
+}
+
+footer {
+    width: 100vw;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+    background-color: var(--ash);
+}
+

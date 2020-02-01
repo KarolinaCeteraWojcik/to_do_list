@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CodersLab</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap&subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1 class="title">ToDo Ultimate</h1>
+    </header>
+    <main>
+        <div class="adding-box">
+            <input id="taskInput" placeholder="Place your task here">
+            <div class="priority-box">
+                <span class="priority-description">Set your task priority</span><input id="priorityInput" type="number" min="1" max="10" id="priorityInput">
+            </div>
+            <button class="confirm" id="addTaskButton">Add task</button>
+        </div>
+
+        <div class="task-box">
+            <h2 class="to-finish">
+                    Tasks to finish: <span id="counter"></span>
+            </h2>
+            <ul class="task-list" id="taskList">
+            </ul>
+            <button class="remove" id="removeFinishedTasksButton">
+                Remove finished tasks
+            </button>
+        </div>
+    </main>
+<footer>
+    You may not finish all tasks... But check out how cool they look!
+</footer>
+    <script src="js/app.js"></script>
+</body>
+</html>
